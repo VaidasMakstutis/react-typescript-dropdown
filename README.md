@@ -1,4 +1,4 @@
-# Task:
+# Task
 
 Create dropdown component from scratch using React and Typescript
 

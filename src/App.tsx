@@ -1,25 +1,11 @@
 import React from "react";
 import Dropdown from "./components/Dropdown";
-
-const items = [
-  {
-    id: 1,
-    name: "Lithuania"
-  },
-  {
-    id: 2,
-    name: "Latvia"
-  },
-  {
-    id: 3,
-    name: "Estonia"
-  },
-];
+import { items } from "../src/data/items";
 
 const App = () => {
   return (
     <div>
-      <Dropdown items={items} title="Select country" />
+      <Dropdown items={items} title="Select country/countries" />
     </div>
   );
 }

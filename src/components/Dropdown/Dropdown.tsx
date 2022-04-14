@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-// import DropdownItem from "./DropdownItem";
 
-export interface IDropdownProps {
+interface IDropdownProps {
     title: string,
     items: {id: number, name: string} []
     // multiselect: boolean
 }
 
-const Dropdown: React.FC<IDropdownProps> = (props) => {
+const Dropdown = (props: IDropdownProps) => {
     const {title, items} = props;
     const [open, setOpen] = useState(false);
     const [selection, setSelection] = useState([]);
@@ -34,7 +33,6 @@ const Dropdown: React.FC<IDropdownProps> = (props) => {
             </div>
             {open && (
                 <ul className="dropdown-list">
-                    {/* <DropdownItem /> */}
                     {items.map(item => {
                         return (
                         <li className="dropdown-list-item" key={item.id}>

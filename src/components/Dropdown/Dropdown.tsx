@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import DropdownItem from "./DropdownItem";
 
-interface IDropdownProps {
+export interface IDropdownProps {
     title: string,
     items: {id: number, name: string} []
     // multiselect: boolean
@@ -12,8 +13,6 @@ const Dropdown = (props: IDropdownProps) => {
     const [selection, setSelection] = useState([]);
 
     const toggle = () => setOpen(!open);
-
-    const handleClicker = (item: any = true) => {}
 
     return (
         <div className="dropdown-wrapper">
@@ -31,20 +30,7 @@ const Dropdown = (props: IDropdownProps) => {
                     <p>{open ? "Close" : "Open"}</p>
                 </div>
             </div>
-            {open && (
-                <ul className="dropdown-list">
-                    {items.map(item => {
-                        return (
-                        <li className="dropdown-list-item" key={item.id}>
-                            <button type="button" onClick={() => handleClicker(item)}>
-                            <span>{item.name}</span>
-                            <span>Selected...</span>
-                            </button>
-                        </li>
-                        )
-                    })}
-                </ul>
-            )}
+            {open && <DropdownItem /> }
         </div>
     )
 }

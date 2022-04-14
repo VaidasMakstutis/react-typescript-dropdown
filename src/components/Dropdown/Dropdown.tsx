@@ -24,7 +24,7 @@ const Dropdown = (props: IDropdownProps) => {
             onClick={() => toggle()} 
             >
                 <div className="dropdown-header_title">
-                    <p className="dropdown-header_title_bold">{title}</p>
+                    <p>{title}</p>
                 </div>
                 <div className="dropdown-header_action">
                     <p>{open ? "Close" : "Open"}</p>

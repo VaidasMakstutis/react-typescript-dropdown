@@ -16,7 +16,7 @@ const Dropdown = (props: IDropdownProps) => {
   const { title, multiSelect = false } = props;
 
   const [open, setOpen] = useState(false);
-  const [selection, setSelection] = useState([]);
+  const [selection, setSelection] = useState<Item[]>([]);
 
   const toggle = () => setOpen(!open);
 

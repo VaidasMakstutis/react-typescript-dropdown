@@ -6,7 +6,7 @@ import "../src/css/index.scss";
 const App = () => {
   return (
     <div className="container">
-      <Dropdown items={items} title="Select country/countries" />
+      <Dropdown items={items} title="Select country/countries" multiSelect />
     </div>
   );
 }

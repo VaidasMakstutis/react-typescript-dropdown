@@ -1,17 +1,42 @@
 @import "./template.scss";
 
 .dropdown-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  .dropdown-header {
+    @include template;
     display: flex;
-    flex-wrap: wrap;
-    .dropdown-header {
-        @include template;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    cursor: pointer;
+    &_title,
+    &_action > p {
+      font-weight: bold;
+    }
+  }
+  .dropdown-list {
+    width: 100%;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    li {
+      list-style-type: none;
+      button {
+        width: 100%;
         display: flex;
         justify-content: space-between;
-        width: 100%;
-        padding: 20px;
+        font-size: 0.9rem;
+        padding: 15px 20px;
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
         cursor: pointer;
-         &_title, &_action > p {
-            font-weight: bold;
-          }
+        &:hover,
+        &:focus {
+          font-weight: bold;
+          background-color: #ccc;
+        }
+      }
     }
+  }
 }
